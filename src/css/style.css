@@ -1,0 +1,59 @@
+:root {
+  --color-primario: #2c3e50;
+  --color-secundario: #ecf0f1;
+  --color-hover: #3498db;
+  --fuente: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente);
+  background-color: var(--color-secundario);
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-primario);
+  padding: 1rem 2rem;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links a {
+  margin-left: 1.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--color-hover);
+}
+
+/* RESPONSIVE - media query */
+@media (max-width: 768px) {
+  .nav-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .nav-links a {
+    margin: 0.5rem 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
