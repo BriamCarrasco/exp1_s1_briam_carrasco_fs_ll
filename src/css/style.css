@@ -41,9 +41,12 @@ body {
 
 .cards {
   display: flex;
-  flex-wrap: wrap; /* Permitir que las cards se acomoden en varias filas */
-  justify-content: center;
-  gap: 1rem; /* Espacio entre cards */
+  flex-wrap: wrap;
+  justify-content: center; /* Centra las cards horizontalmente */
+  gap: 1rem; /* Espacio entre las cards */
+  max-width: 1200px; /* Limita el ancho total */
+  margin: 0 auto; /* Centra el contenedor */
+  padding: 1rem;
 }
 
 .card {
@@ -57,6 +60,19 @@ body {
   flex-direction: column;
   min-width: 250px; /* Para asegurar ancho mínimo */
   max-width: 100%;
+}
+
+.card .img img {
+  width: 100%;      /* Escala la imagen al ancho del contenedor */
+  height: auto;     /* Mantiene la proporción */
+  border-radius: 6px; /* Opcional: bordes redondeados */
+  object-fit: contain; /* Si quieres recortar para que se ajuste visualmente */
+  max-height: 200px; /* Opcional: para limitar el alto */
+}
+
+.card .img {
+  width: 100%;
+  overflow: hidden; /* Previene que imágenes desborden */
 }
 
 .card .content{
